@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sahzade AI Chat UI V3</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app-container">
+
+    <section class="chat-card">
+
+      <header class="chat-header">
+        <div>
+          <h1>Sahzade AI</h1>
+          <p>Local Chat UI V3</p>
+        </div>
+
+        <span class="status-badge" id="statusBadge">
+          Local API
+        </span>
+      </header>
+
+      <section class="chat-box" id="chatBox">
+        <div class="message assistant-message">
+          <p>Hello. I am ready.</p>
+        </div>
+      </section>
+
+      <form class="chat-form" id="chatForm">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message..."
+          autocomplete="off"
+          required
+        />
+
+        <button type="submit" id="sendButton">
+          Send
+        </button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

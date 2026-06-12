@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #000309, #232b35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8fafc;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 24px;
+}
+
+.chat-card {
+  width: 100%;
+  height: 80vh;
+  background: rgba(0, 3, 10, 0.876);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 22px 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.chat-header p {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(10, 249, 97, 0.15);
+  color: #86efac;
+  font-size: 13px;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.chat-box {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 13px 16px;
+  border-radius: 18px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.assistant-message {
+  align-self: flex-start;
+  background: rgba(29, 48, 74, 0.524);
+  color: #f8fafc;
+  border-bottom-left-radius: 6px;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #2564eb5d;
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.loading-message {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.chat-form {
+  padding: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  gap: 12px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-form input::placeholder {
+  color: #64748b;
+}
+
+.chat-form input:focus {
+  border-color: #3b82f6;
+}
+
+.chat-form button {
+  padding: 0 22px;
+  border: none;
+  border-radius: 16px;
+  background: #0c1a37;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background: #00040d;
+}
+
+.chat-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
